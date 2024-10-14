@@ -1,0 +1,26 @@
+name: PR
+on:
+  push:
+    branches: [master]
+  pull_request:
+    types: [opened, reopened, synchronize, edited]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup bazel
+        uses: bazel-contrib/setup-bazel@0.9.0
+        with:
+          # Avoid downloading Bazel every time.
+          bazelisk-cache: true
+          # Store build cache per workflow.
+          disk-cache: ${{ github.workflow }}
+          # Share repository cache between workflows.
+          repository-cache: true
+      - name: Build
+        run: bazel build //...
+      - name: Test
+        run: bazel test //...        
