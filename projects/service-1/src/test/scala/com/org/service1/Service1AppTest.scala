@@ -1,7 +1,7 @@
 package com.org.service1
 
-import org.scalatest.funsuite.AnyFunSuite
 import com.org.service1.Service1App
+import org.scalatest.funsuite.AnyFunSuite
 
 class Service1AppTest extends AnyFunSuite {
 
