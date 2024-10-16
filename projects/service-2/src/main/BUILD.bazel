@@ -1,4 +1,4 @@
-scala_binary(
+scala_library(
     name = "service2",
     srcs = glob(["scala/**/*.scala"]),
     main_class = "com.org.service2.Service2App",
@@ -7,4 +7,10 @@ scala_binary(
         "//projects/service-2/src/test:__pkg__",  # limiting visibility only to tests
     ],
     deps = ["//projects/commons/init-log/src/main:init-log"],
+)
+
+docker_image(
+    application_name = "service2",
+    main_class = "com.org.service2.Service2App",
+    deps = [":service2"],
 )
