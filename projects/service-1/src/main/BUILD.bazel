@@ -4,7 +4,8 @@ scala_library(
     main_class = "com.org.service1.Service1App",
     resources = glob(["resources/*"]),
     visibility = [
-        "//projects/service-1/src/test:__pkg__",  # limiting visibility only to tests
+        "//projects/service-1/src/it:__pkg__",  # limiting visibility to unit tests
+        "//projects/service-1/src/test:__pkg__",  # limiting visibility to it tests
     ],
     deps = ["//projects/commons/init-log/src/main:init-log"],
 )

@@ -1,4 +1,4 @@
-scala_test(
+unit_test(
     name = "tests",
     srcs = glob(["scala/**/*.scala"]),
     resources = glob(["resources/**/*"]),
