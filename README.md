@@ -1,11 +1,10 @@
 # Scala Bazel Monorepo
-Example monorepo with Scala
-
-Shows how Bazel and Scala can be combined into big monorepo with many microservices.
+An example of a monorepo using Bazel and Scala, demonstrating how to structure and manage multiple Scala microservice with fast efficient builds, testing, docker image building and more.
 
 ## Features
-
-Here is description of features from combining Bazel and Monorepo:
+Although, this is project is just example, it can be used as template for Scala Monorepo with Bazel.
+It contains proposed code structure, testing, formatting, image builds and other. 
+List of such features is below table:
 
 | Feature          | Description                                                                                                          | Link                            |
 |------------------|----------------------------------------------------------------------------------------------------------------------|---------------------------------|
@@ -15,18 +14,15 @@ Here is description of features from combining Bazel and Monorepo:
 | Test separation  | Different types of tests can be introduced to test in required ways                                                  | [Tests types](#tests-types)     |
 | Formatting       | Required for devs, and tested on CI                                                                                  | [Formatting](#formatting)       |
 | Docker           | Included creation of docker image for services                                                                       | [Docker](#docker)               |
-| Multilanguage    | Bazel supports multiple languages, and all can be in one repository                                                  | [Multilanguage](#multilanguage) |
 
-## Cache
-
+### Cache
 Bazel is only rebuilding parts for application that were changed.
 You changed only one service and need to [docker image](#docker)? Then Bazel will only build this one service, now whole monorepo. 
 Cache can be included in [CI](.github/workflows/pr.yml) for faster build.
 
 What's more, cache can be shared by many CI jobs and even remote execution is possible. This is descried in [official docs](https://bazel.build/remote/rbe)
 
-## Commons
-
+### Commons
 Main strength of monorepo is shared and consistent code. 
 You don't need "commons libraries", everything can be inside repository and compiled as one.
 
@@ -49,7 +45,7 @@ What else can be in commons? Here are few examples:
 
 You don't to have separate libraries to share code parts.
 
-## Tests speed
+### Tests speed
 When you run tests second without any changes you can see following result
 
 ```bash 
@@ -85,8 +81,7 @@ Executed 1 out of 3 tests: 3 tests pass.
 
 Note: If you don't need this caching, you can always use `--cache_test_results=no` to force run of all tests.
 
-## Tests types
-
+### Tests types
 In this repository tests are separated into two types
 
 #### 1. Unit tests
@@ -109,8 +104,7 @@ bazel test --test_tag_filters=integration  //...
 Tests definitions can be found in [test.bzl](tools/test.bzl).
 Bazel does not limit number of types of tests. If you need another type of test like E2E, you can introduce new type.
 
-## Formatting
-
+### Formatting
 Code should be formatted with
 ```bash
 ./tools/scalafmt
@@ -122,8 +116,7 @@ Formatting is tested in [CI](.github/workflows/pr.yml)
 That's why I decided to use [standalone](https://scalameta.org/scalafmt/docs/installation.html#standalone) version of scalafmt.
 Alternative can be [rules_lint](https://github.com/aspect-build/rules_lint)
 
-## Docker
-
+### Docker
 Docker images are build using rules_oci. 
 Each service build file has extension docker_image, which points to [oci.bzl](tools/oci.bzl)
 
@@ -142,7 +135,6 @@ Push of image
 bazel run //projects/service-1/src/main:push
 ```
 
-# Multilanguage
-
-Although this repository is not providing example for many languages, it's possible to incorporate many languages in one project.
+## Multilanguage
+Despite this repository is not providing example for many languages, it's possible to incorporate many languages in one project.
 For example in this project I could add frontend or microservices in many languages (GoLang, Java, C++....).
