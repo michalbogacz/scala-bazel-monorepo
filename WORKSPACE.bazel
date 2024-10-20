@@ -8,9 +8,11 @@ http_archive(
 )
 
 load("@io_bazel_rules_scala//:scala_config.bzl", "scala_config")
+
 scala_config(scala_version = "2.13.14")
 
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_repositories")
+
 scala_repositories(
     overriden_artifacts = {
         # Change both the artifact names and sha256s.
@@ -30,12 +32,17 @@ scala_repositories(
 )
 
 load("@rules_proto//proto:repositories.bzl", "rules_proto_dependencies", "rules_proto_toolchains")
+
 rules_proto_dependencies()
+
 rules_proto_toolchains()
 
 load("@io_bazel_rules_scala//scala:toolchains.bzl", "scala_register_toolchains")
-scala_register_toolchains()
+
+register_toolchains(":custom_scala_toolchain")
 
 load("@io_bazel_rules_scala//testing:scalatest.bzl", "scalatest_repositories", "scalatest_toolchain")
+
 scalatest_repositories()
+
 scalatest_toolchain()

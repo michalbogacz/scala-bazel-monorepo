@@ -1,0 +1,15 @@
+load("@io_bazel_rules_scala//scala:scala.bzl", "setup_scala_toolchain")
+
+setup_scala_toolchain(
+    name = "custom_scala_toolchain",
+    scalacopts = [
+        "-Wunused",  # Warn if an a construct is unused.
+        "-Wdead-code",  # Warn when dead code is identified.
+        "-Xlint:inaccessible",  # Warn about inaccessible types in method signatures.
+        "-feature",
+        "-Ymacro-annotations",
+        "-Werror",
+    ],
+    strict_deps_mode = "error",
+    unused_dependency_checker_mode = "off",
+)
