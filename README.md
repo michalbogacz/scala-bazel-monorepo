@@ -6,14 +6,16 @@ Although, this is project is just example, it can be used as template for Scala 
 It contains proposed code structure, testing, formatting, image builds and other. 
 List of such features is below table:
 
-| Feature          | Description                                                                                                          | Link                            |
-|------------------|----------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| Fast compilation | Bazel is caching all compiled parts and on recompile what is needed                                                  | [Cache](#cache)                 |
-| Commons          | You have code duplication across service? Or need to share common parts like models? This project shows how to do it | [Commons](#commons)             |
-| Fast tests       | Bazel runs only tests that are needed                                                                                | [Tests speed](#tests-speed)     |
-| Test separation  | Different types of tests can be introduced to test in required ways                                                  | [Tests types](#tests-types)     |
-| Formatting       | Required for devs, and tested on CI                                                                                  | [Formatting](#formatting)       |
-| Docker           | Included creation of docker image for services                                                                       | [Docker](#docker)               |
+| Feature          | Description                                                                                                          | Link                        |
+|------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------|
+| Fast compilation | Bazel is caching all compiled parts and on recompile what is needed                                                  | [Cache](#cache)             |
+| Commons          | You have code duplication across service? Or need to share common parts like models? This project shows how to do it | [Commons](#commons)         |
+| Fast tests       | Bazel runs only tests that are needed                                                                                | [Tests speed](#tests-speed) |
+| Test separation  | Different types of tests can be introduced to test in required ways                                                  | [Tests types](#tests-types) |
+| Formatting       | Required for devs, and tested on CI                                                                                  | [Formatting](#formatting)   |
+| Docker           | Included creation of docker image for services                                                                       | [Docker](#docker)           |
+| Scripts          | Scripts can be integrated into monorepo and use parts of implementation                                              | [Scripts](#scripts)         |
+| CI               | Simple PR build test                                                                                                 | [CI](#ci)                   |
 
 ### Cache
 Bazel is only rebuilding parts for application that were changed.
@@ -134,6 +136,23 @@ Push of image
 ```bash
 bazel run //projects/service-1/src/main:push
 ```
+
+## Scripts
+
+Scripts can be embedded into monorepo. This makes possible to reuse existing code which reduces risk of scripts being outdated.
+Execution (and compilation) of scripts is fast because, even with empty repo bazel will only compile what is needed to run script.
+
+To execute example script use
+```bash
+bazel run //projects/scripts:manualInit -- myArg1 myArg2
+```
+
+Check [scripts readme](projects/scripts/README.md) to get more details.
+
+## CI
+
+This repository also contains simple pull request check [pr.yml](.github/workflows/pr.yml)
+To make it faster, it also uses persistent cache.
 
 ## Multilanguage
 Despite this repository is not providing example for many languages, it's possible to incorporate many languages in one project.

@@ -1,0 +1,8 @@
+scala_library(
+    name = "manualInit",
+    srcs = glob(["**/*.scala"]),
+    visibility = ["//visibility:public"],
+    deps = [
+        "//projects/commons/init-log/src/main:init-log",
+    ],
+)

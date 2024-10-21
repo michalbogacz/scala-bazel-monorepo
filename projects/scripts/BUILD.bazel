@@ -1,0 +1,8 @@
+scala_binary(
+    name = "manualInit",
+    main_class = "projects.scripts.src.main.scala.com.org.manual_init.ManualInit",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//projects/scripts/src/main/scala/com/org/manual_init:manualInit",
+    ],
+)
