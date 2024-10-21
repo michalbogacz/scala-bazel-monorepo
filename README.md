@@ -4,7 +4,8 @@ An example of a monorepo using Bazel and Scala, demonstrating how to structure a
 ## Features
 Although, this is project is just example, it can be used as template for Scala Monorepo with Bazel.
 It contains proposed code structure, testing, formatting, image builds and other. 
-List of such features is below table:
+
+List of features presented in this repository is below table:
 
 | Feature          | Description                                                                                                          | Link                        |
 |------------------|----------------------------------------------------------------------------------------------------------------------|-----------------------------|
@@ -138,7 +139,6 @@ bazel run //projects/service-1/src/main:push
 ```
 
 ## Scripts
-
 Scripts can be embedded into monorepo. This makes possible to reuse existing code which reduces risk of scripts being outdated.
 Execution (and compilation) of scripts is fast because, even with empty repo bazel will only compile what is needed to run script.
 
@@ -150,7 +150,6 @@ bazel run //projects/scripts:manualInit -- myArg1 myArg2
 Check [scripts readme](projects/scripts/README.md) to get more details.
 
 ## CI
-
 This repository also contains simple pull request check [pr.yml](.github/workflows/pr.yml)
 To make it faster, it also uses persistent cache.
 
