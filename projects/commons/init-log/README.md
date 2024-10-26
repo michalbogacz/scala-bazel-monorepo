@@ -1,3 +1,4 @@
 # init-log
 
-Shared code to have common initialization log
+Commons contains code designed to be shared by many service.
+This "common" contains initialization log 

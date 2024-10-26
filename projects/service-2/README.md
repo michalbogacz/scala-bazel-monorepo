@@ -1,3 +1,3 @@
 # Service 2
 
-Example of one of microservices, can use shared `commons`
+An example of microservices using shared `commons`

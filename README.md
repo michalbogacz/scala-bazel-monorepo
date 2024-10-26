@@ -165,7 +165,17 @@ This repository also contains a simple pull request check [pr.yml](.github/workf
 To make it faster, it also uses a persistent cache.
 
 ## IDE
+This project can be imported in Intellij IDEA with installed "Bazel for IntelliJ"
+Here is a short instruction:
+1. Install Bazel with [bazelisk](https://bazel.build/install/bazelisk)  
+2. Ensure you have installed "Bazel for IntelliJ" plugin in Intellij IDEA
+3. Pull this repository from GitHub
+4. In the "Welcome to IntelliJ IDEA" window you will see "Import Bazel Project...", click it
+5. Select this directory 
+6. In "Select project view", select "create from scratch" and "Next"
+7. In the last window select "Create"
 
+If you need project to be rebuilt, use "Bazel" -> "Sync project with BUILD files"
 
 ## Dependencies
 The below table shows where you can find which versions for dependencies
