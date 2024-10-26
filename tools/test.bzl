@@ -6,7 +6,7 @@ def unit_test(**kwargs):
     add_tags(kwargs, "unit")
     return scala_test(**kwargs)
 
-# "exclusive" to not run these tests at the same time
+# Integration tests should be independent, but in case you can't achieve that, you can use "exclusive" tag to not run tests at the same time
 # https://bazel.build/reference/be/common-definitions#common-attributes-tests
 def integration_test(**kwargs):
     set_default_name(kwargs)
