@@ -186,6 +186,9 @@ The below table shows where you can find which versions for dependencies
 | Scala version | [WORKSPACE.bazel](WORKSPACE.bazel) in `scala_version` |
 | Libraries     | [Module.bazel](MODULE.bazel)                          |
 
+
+After updating libraries, make sure to [pin them](https://github.com/bazel-contrib/rules_jvm_external?tab=readme-ov-file#pinning-artifacts-and-integration-with-bazels-downloader)
+
 ## Multilanguage
 Despite this repository is not providing example for many languages, it's possible to incorporate many languages in one project.
 For example in this project I could add frontend or microservices in many languages (GoLang, Java, C++....).

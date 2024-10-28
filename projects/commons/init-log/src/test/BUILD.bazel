@@ -4,6 +4,5 @@ unit_test(
     resources = glob(["resources/**/*"]),
     deps = [
         "//projects/commons/init-log/src/main:init-log",
-        "@maven//:org_scala_lang_modules_scala_xml_2_13",
     ],
 )
