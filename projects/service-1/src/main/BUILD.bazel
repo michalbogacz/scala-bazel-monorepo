@@ -7,7 +7,10 @@ scala_library(
         "//projects/service-1/src/it:__pkg__",  # limiting visibility to unit tests
         "//projects/service-1/src/test:__pkg__",  # limiting visibility to it tests
     ],
-    deps = ["//projects/commons/init-log/src/main:init-log"],
+    deps = [
+        "//projects/commons/init-log/src/main:init-log",
+        "@maven//:com_softwaremill_sttp_tapir_tapir_core_3",
+    ],
 )
 
 docker_image(
