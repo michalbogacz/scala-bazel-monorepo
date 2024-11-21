@@ -1,10 +1,10 @@
 bazel_dep(name = "bazel_skylib", version = "1.7.1")
-bazel_dep(name = "rules_jvm_external", version = "6.4")
+bazel_dep(name = "rules_jvm_external", version = "6.5")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
-        "com.softwaremill.sttp.tapir:tapir-core_3:1.11.7",
+        "com.softwaremill.sttp.tapir:tapir-core_3:1.11.9",
     ],
     fetch_sources = True,
     lock_file = "//:maven_install.json",
