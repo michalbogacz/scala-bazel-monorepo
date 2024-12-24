@@ -686,7 +686,7 @@
     "@@rules_oci~//oci:extensions.bzl%oci": {
       "general": {
         "bzlTransitiveDigest": "3dbYfdImWmRmev3qcejnBx/+GSuBiPIdEbj/tJ6z7hk=",
-        "usagesDigest": "2SxLvA56i+9ma43FecUOlhHJoFxf0HtmjE6YC0HdBsE=",
+        "usagesDigest": "pUYAmky7guIowxOYl/pVry6kUoqAWnil094rWbddP50=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -698,7 +698,7 @@
               "scheme": "https",
               "registry": "index.docker.io",
               "repository": "library/eclipse-temurin",
-              "identifier": "sha256:d3d8ae316273809f5ac37b4c9016a7b1b37e83555c1956b5f9fab3625d1a5de2",
+              "identifier": "sha256:44a6b43221053ab8cdac5c634070a0731fb4aab9e629098ed72b026e76ccdab8",
               "target_name": "java_temurin_single",
               "bazel_tags": []
             }
@@ -711,7 +711,7 @@
               "scheme": "https",
               "registry": "index.docker.io",
               "repository": "library/eclipse-temurin",
-              "identifier": "sha256:d3d8ae316273809f5ac37b4c9016a7b1b37e83555c1956b5f9fab3625d1a5de2",
+              "identifier": "sha256:44a6b43221053ab8cdac5c634070a0731fb4aab9e629098ed72b026e76ccdab8",
               "platforms": {},
               "platform": "@@rules_oci~//oci:java_temurin_single",
               "bzlmod_repository": "java_temurin",
