@@ -1,5 +1,5 @@
 # this file allows to load by default selected rules
 
-load("@io_bazel_rules_scala//scala:scala.bzl", "scala_test", "scala_binary", "scala_library")
+load("@rules_scala//scala:scala.bzl", "scala_test", "scala_binary", "scala_library")
 load("//tools:oci.bzl", "docker_image")
 load("//tools:test.bzl", "unit_test", "integration_test")
