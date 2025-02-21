@@ -1,5 +1,5 @@
 bazel_dep(name = "bazel_skylib", version = "1.7.1")
-bazel_dep(name = "rules_scala", repo_name = "io_bazel_rules_scala")
+bazel_dep(name = "rules_scala")
 git_override(
     module_name = "rules_scala",
     commit = "df7cacc81862b76303dbbfcfd59e090e5cd4e194",
@@ -9,13 +9,13 @@ git_override(
 register_toolchains("//:custom_scala_toolchain")
 
 scala_config = use_extension(
-    "@io_bazel_rules_scala//scala/extensions:config.bzl",
+    "@rules_scala//scala/extensions:config.bzl",
     "scala_config",
 )
 scala_config.settings(scala_version = "3.3.5")
 
 scala_deps = use_extension(
-    "@io_bazel_rules_scala//scala/extensions:deps.bzl",
+    "@rules_scala//scala/extensions:deps.bzl",
     "scala_deps",
 )
 scala_deps.settings(

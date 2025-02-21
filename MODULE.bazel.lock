@@ -1278,7 +1278,7 @@
     "@@rules_scala~//scala/extensions:config.bzl%scala_config": {
       "general": {
         "bzlTransitiveDigest": "qHhL89RmDRskhr2pYOinaanUFojvcuSK2jkE/xfWOs4=",
-        "usagesDigest": "jdbD/LtNaM7ANtjdZz/32al96fXUndIabuKJc75y1Gw=",
+        "usagesDigest": "XEazSf4OomcRGDUHa1NJ/SswzXsq3Y2ql37UVdEByow=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {
@@ -1304,7 +1304,7 @@
     "@@rules_scala~//scala/extensions:deps.bzl%scala_deps": {
       "general": {
         "bzlTransitiveDigest": "CZKYVVsbGvdKdd3D3X1WTsKKKnwX/3jCiE0OmG4qxg4=",
-        "usagesDigest": "qnd+x0EumB8ajRdEWrhtJNxypOr8/J8lDFFt20zh3Y8=",
+        "usagesDigest": "Ky16ljWUagk6Vyaptd8U43itHAAu8wpBiwXFQHY9Eds=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
