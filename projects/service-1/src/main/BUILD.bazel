@@ -9,7 +9,7 @@ scala_library(
     ],
     deps = [
         "//projects/commons/init-log/src/main:init-log",
-        "@maven//:com_softwaremill_sttp_tapir_tapir_core_3",
+        "@maven//:com_softwaremill_sttp_tapir_tapir_core_2_13",
     ],
 )
 
