@@ -1,0 +1,16 @@
+update-rules:
+  - bumping: latest
+
+post-update-hooks:
+  - kinds: maven
+    commands:
+      - "REPIN=1 bazel run @maven//:pin"
+    files-to-commit:
+      - "maven_install.json"
+    run-for: commit
+  - kinds: bazel
+    commands:
+      - "bazel mod deps"
+    files-to-commit:
+      - "MODULE.bazel.lock"
+    run-for: commit
