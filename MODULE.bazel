@@ -2,7 +2,7 @@ bazel_dep(name = "bazel_skylib", version = "1.7.1")
 bazel_dep(name = "rules_scala")
 git_override(
     module_name = "rules_scala",
-    commit = "54e979f6836f343ccfecc182d2f70eeec964710b",
+    commit = "b10cee6d6c509a8c543b1af9f9d75cc86af16cf6",
     remote = "https://github.com/mbland/rules_scala",
 )
 
