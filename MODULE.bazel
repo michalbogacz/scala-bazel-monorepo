@@ -1,14 +1,9 @@
 bazel_dep(name = "bazel_skylib", version = "1.7.1")
-bazel_dep(name = "rules_scala")
-git_override(
-    module_name = "rules_scala",
-    commit = "e2575a30a2eb3946731ac9a8e922c87fcd7dbee4",
-    remote = "https://github.com/bazel-contrib/rules_scala",
-)
+bazel_dep(name = "rules_scala", version = "7.0.0")
 
 register_toolchains("//:custom_scala_toolchain")
 
-scala_version = "2.13.15"
+scala_version = "3.3.6"
 
 scala_config = use_extension(
     "@rules_scala//scala/extensions:config.bzl",
@@ -19,21 +14,6 @@ scala_config.settings(scala_version = scala_version)
 scala_deps = use_extension(
     "@rules_scala//scala/extensions:deps.bzl",
     "scala_deps",
-)
-scala_deps.overridden_artifact(
-    name = "io_bazel_rules_scala_scala_library",
-    artifact = "org.scala-lang:scala-library:%s" % scala_version,
-    sha256 = "8e4dbc3becf70d59c787118f6ad06fab6790136a0699cd6412bc9da3d336944e",
-)
-scala_deps.overridden_artifact(
-    name = "io_bazel_rules_scala_scala_compiler",
-    artifact = "org.scala-lang:scala-compiler:%s" % scala_version,
-    sha256 = "4c200cd193c082bec14a2a2dffe6a1ba5f8130b1b27c79ee54c936dfcafc8ed9",
-)
-scala_deps.overridden_artifact(
-    name = "io_bazel_rules_scala_scala_reflect",
-    artifact = "org.scala-lang:scala-reflect:%s" % scala_version,
-    sha256 = "78d0cc350e1ee42d87c6e11cf5b0dc7bf0b70829c00aa38f27bfb019d439dc11",
 )
 scala_deps.settings(
     fetch_sources = True,
@@ -46,7 +26,7 @@ bazel_dep(name = "rules_jvm_external", version = "6.7")
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
-        "com.softwaremill.sttp.tapir:tapir-core_2.13:1.11.23",
+        "com.softwaremill.sttp.tapir:tapir-core_3:1.11.23",
     ],
     fetch_sources = True,
     lock_file = "//:maven_install.json",

@@ -3,7 +3,7 @@ load("@rules_scala//scala:scala_toolchain.bzl", "scala_toolchain")
 scala_toolchain(
     name = "custom_scala_toolchain_impl",
     scalacopts = [
-        "-Ywarn-unused",
+        "-Wunused:all",
     ],
     strict_deps_mode = "error",
     unused_dependency_checker_mode = "warn",
