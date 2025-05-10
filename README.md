@@ -180,11 +180,11 @@ If you need project to be rebuilt, use "Bazel" -> "Sync project with BUILD files
 ## Dependencies
 The below table shows where you can find which versions for dependencies
 
-| Dependency    | Place                                                 |
-|---------------|-------------------------------------------------------|
-| Java version  | [.bazelrc](.bazelrc)                                  |
-| Scala version | [WORKSPACE.bazel](WORKSPACE.bazel) in `scala_version` |
-| Libraries     | [Module.bazel](MODULE.bazel)                          |
+| Dependency    | Place                                           |
+|---------------|-------------------------------------------------|
+| Java version  | [.bazelrc](.bazelrc)                            |
+| Scala version | [Module.bazel](MODULE.bazel) in `scala_version` |
+| Libraries     | [Module.bazel](MODULE.bazel) in `maven.install` |
 
 
 After updating libraries, make sure to [pin them](https://github.com/bazel-contrib/rules_jvm_external?tab=readme-ov-file#pinning-artifacts-and-integration-with-bazels-downloader)
