@@ -2,7 +2,6 @@ scala_library(
     name = "service2",
     srcs = glob(["scala/**/*.scala"]),
     main_class = "com.org.service2.Service2App",
-    resources = glob(["resources/*"]),
     visibility = [
         "//projects/service-2/src/test:__pkg__",  # limiting visibility only to tests
     ],
