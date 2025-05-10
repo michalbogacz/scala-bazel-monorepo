@@ -10,7 +10,7 @@ post-update-hooks:
     run-for: commit
   - kinds: bazel
     commands:
-      - "bazel mod deps"
+      - "bazel mod tidy"
     files-to-commit:
       - "MODULE.bazel.lock"
     run-for: commit
