@@ -2,9 +2,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "io_bazel_rules_scala",
-    sha256 = "e734eef95cf26c0171566bdc24d83bd82bdaf8ca7873bec6ce9b0d524bdaf05d",
-    strip_prefix = "rules_scala-6.6.0",
-    url = "https://github.com/bazelbuild/rules_scala/releases/download/v6.6.0/rules_scala-v6.6.0.tar.gz",
+    sha256 = "a4700d6e6cdf13cf85e29029ec998e2ec3ba94791606ec83d2c96e3c5b0aebed",
+    strip_prefix = "rules_scala-7.0.0",
+    url = "https://github.com/bazelbuild/rules_scala/releases/download/v7.0.0/rules_scala-v7.0.0.tar.gz",
 )
 
 load("@io_bazel_rules_scala//:scala_config.bzl", "scala_config")
