@@ -26,7 +26,7 @@ bazel_dep(name = "rules_jvm_external", version = "6.7")
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
-        "com.softwaremill.sttp.tapir:tapir-core_3:1.11.34",
+        "com.softwaremill.sttp.tapir:tapir-core_3:1.11.35",
     ],
     fetch_sources = True,
     lock_file = "//:maven_install.json",
