@@ -1,5 +1,5 @@
-bazel_dep(name = "bazel_skylib", version = "1.7.1")
-bazel_dep(name = "rules_scala", version = "7.0.0")
+bazel_dep(name = "bazel_skylib", version = "1.8.1")
+bazel_dep(name = "rules_scala", version = "7.1.1")
 
 register_toolchains("//:custom_scala_toolchain")
 
@@ -26,7 +26,7 @@ bazel_dep(name = "rules_jvm_external", version = "6.8")
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
-        "com.softwaremill.sttp.tapir:tapir-core_3:1.11.34",
+        "com.softwaremill.sttp.tapir:tapir-core_3:1.11.42",
     ],
     fetch_sources = True,
     lock_file = "//:maven_install.json",
