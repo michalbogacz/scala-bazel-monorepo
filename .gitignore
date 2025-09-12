@@ -1,9 +1,14 @@
 *.class
 *.log
 
-# intellij
+# ide
 .idea
 .ijwb
+.vscode
+.bsp
+.metals
+.vscode
+.bazelbsp
 
 # bazel
 bazel-bin
