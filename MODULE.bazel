@@ -21,7 +21,7 @@ scala_deps.settings(
 scala_deps.scala()
 scala_deps.scalatest()
 
-bazel_dep(name = "rules_jvm_external", version = "6.8")
+bazel_dep(name = "rules_jvm_external", version = "6.9")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
