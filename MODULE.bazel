@@ -1,9 +1,9 @@
-bazel_dep(name = "bazel_skylib", version = "1.8.1")
-bazel_dep(name = "rules_scala", version = "7.1.2")
+bazel_dep(name = "bazel_skylib", version = "1.8.2")
+bazel_dep(name = "rules_scala", version = "7.1.4")
 
 register_toolchains("//:custom_scala_toolchain")
 
-scala_version = "3.3.6"
+scala_version = "3.3.7"
 
 scala_config = use_extension(
     "@rules_scala//scala/extensions:config.bzl",
@@ -21,7 +21,7 @@ scala_deps.settings(
 scala_deps.scala()
 scala_deps.scalatest()
 
-bazel_dep(name = "rules_jvm_external", version = "6.8")
+bazel_dep(name = "rules_jvm_external", version = "6.9")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
