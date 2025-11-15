@@ -1,5 +1,5 @@
 bazel_dep(name = "bazel_skylib", version = "1.8.2")
-bazel_dep(name = "rules_scala", version = "7.1.4")
+bazel_dep(name = "rules_scala", version = "7.1.5")
 
 register_toolchains("//:custom_scala_toolchain")
 
