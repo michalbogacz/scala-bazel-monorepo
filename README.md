@@ -29,6 +29,7 @@ A list of features presented in this repository is below table:
 | Docker           | Included creation of docker image for services                          | [Docker](#docker)           |
 | Scripts          | Scripts can be integrated into monorepo and use parts of implementation | [Scripts](#scripts)         |
 | CI               | Simple PR build test                                                    | [CI](#ci)                   |
+| AI               | Metals IDE can exopse MCP to allow AI directly interact with compiler   | [IDE](#ide)                 |
 
 ### Cache
 Bazel is only rebuilding parts for application that were changed.
@@ -165,6 +166,22 @@ This repository also contains a simple pull request check [pr.yml](.github/workf
 To make it faster, it also uses a persistent cache.
 
 ## IDE
+
+### Cursor (or VSCode) + Scala Metals extension
+This project works with [Metals](https://scalameta.org/metals/)
+
+Here is a short instruction:
+1. Install Bazel with [bazelisk](https://bazel.build/install/bazelisk)
+2. Ensure you have installed "Metals" plugin in Cursor/VSCode
+3. Pull this repository from GitHub
+4. Open this project in IDE
+5. In Metals tab, import project
+
+#### AI with Scala Metals
+Beyond the ordinary IDE support, Metals can expose [MCP for AI support](https://scalameta.org/metals/blog/page/7#mcp-support).
+With MCP, AI can compile, test and even inspect types of code, which greatly improves reasoning of code.
+
+### IntelliJ
 This project can be imported in Intellij IDEA with installed "Bazel for IntelliJ"
 Here is a short instruction:
 1. Install Bazel with [bazelisk](https://bazel.build/install/bazelisk)  
