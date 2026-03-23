@@ -46,8 +46,8 @@ bazel_dep(name = "rules_oci", version = "2.3.0")
 oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
 oci.pull(
     name = "java_temurin",
-    digest = "sha256:44a6b43221053ab8cdac5c634070a0731fb4aab9e629098ed72b026e76ccdab8",  # linux/amd64 manifest digest
+    digest = "sha256:e85b0225cfa456374434813f70f964c325449e97fc9a74590864491589e812d4",  # linux/amd64 manifest digest
     image = "eclipse-temurin",
-    tag = "21.0.5_11-jre-noble",
+    tag = "25.0.2_10-jre-noble",
 )
 use_repo(oci, "java_temurin")
