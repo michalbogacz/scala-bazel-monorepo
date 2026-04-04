@@ -8,7 +8,7 @@
     "com.google.j2objc:j2objc-annotations": 2003271689,
     "com.google.protobuf:protobuf-java": -1795397632,
     "com.google.protobuf:protobuf-java-util": -1033086717,
-    "com.softwaremill.sttp.tapir:tapir-core_3": 1547469284,
+    "com.softwaremill.sttp.tapir:tapir-core_3": -2067439642,
     "repositories": -1949687017
   },
   "__RESOLVED_ARTIFACTS_HASH": {
@@ -37,8 +37,8 @@
     "com.softwaremill.sttp.shared:core_3:jar:sources": -1560238310,
     "com.softwaremill.sttp.shared:ws_3": 691537728,
     "com.softwaremill.sttp.shared:ws_3:jar:sources": 1381486517,
-    "com.softwaremill.sttp.tapir:tapir-core_3": -1198986290,
-    "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources": -511086554,
+    "com.softwaremill.sttp.tapir:tapir-core_3": 1236726139,
+    "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources": -956412280,
     "org.checkerframework:checker-qual": 628949150,
     "org.checkerframework:checker-qual:jar:sources": -309007815,
     "org.scala-lang:scala-library": -1079389784,
@@ -139,10 +139,10 @@
     },
     "com.softwaremill.sttp.tapir:tapir-core_3": {
       "shasums": {
-        "jar": "d4f34e82b4334af7ed2d55ac7625f33156ee2b0461b31af7db202bc4b9535f55",
-        "sources": "5ff81929a563b3c925c881ec05cb9e0133329350a41b88f0c1d336b97a2cd3f7"
+        "jar": "6962676fe4c529015532c4cae3c02b8f1c0b5197160eae851e72292bf76f618e",
+        "sources": "6a6c672973fe4a339256b7204a80dc013f6eebbc8e198a7865c0843ee2b3c198"
       },
-      "version": "1.13.13"
+      "version": "1.13.15"
     },
     "org.checkerframework:checker-qual": {
       "shasums": {
