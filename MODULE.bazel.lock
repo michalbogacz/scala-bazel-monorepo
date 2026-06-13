@@ -276,8 +276,8 @@
     "https://bcr.bazel.build/modules/rules_robolectric/4.14.1.2/MODULE.bazel": "d44fec647d0aeb67b9f3b980cf68ba634976f3ae7ccd6c07d790b59b87a4f251",
     "https://bcr.bazel.build/modules/rules_robolectric/4.14.1.2/source.json": "37c10335f2361c337c5c1f34ed36d2da70534c23088062b33a8bdaab68aa9dea",
     "https://bcr.bazel.build/modules/rules_rust/0.45.1/MODULE.bazel": "a69d0db3a958fab2c6520961e1b2287afcc8b36690fd31bbc4f6f7391397150d",
-    "https://bcr.bazel.build/modules/rules_scala/7.2.4/MODULE.bazel": "12f23fa4ab6ec5c32ea6d16991d33903ab2e6817a2dba4bf20ee1c3c0cbad228",
-    "https://bcr.bazel.build/modules/rules_scala/7.2.4/source.json": "a54b3306e4dd935b3514a38f914e2a2075e6047861e5b0674fb53955b40d5e6d",
+    "https://bcr.bazel.build/modules/rules_scala/7.2.6/MODULE.bazel": "027a152217e87140ccbea1e73528b35907c59806390603b80704125243d40007",
+    "https://bcr.bazel.build/modules/rules_scala/7.2.6/source.json": "935f098a206b79c503bc160cb5ab06d9cfd6a73543351f975aa886d6aa8c7228",
     "https://bcr.bazel.build/modules/rules_shell/0.1.2/MODULE.bazel": "66e4ca3ce084b04af0b9ff05ff14cab4e5df7503973818bb91cbc6cda08d32fc",
     "https://bcr.bazel.build/modules/rules_shell/0.2.0/MODULE.bazel": "fda8a652ab3c7d8fee214de05e7a9916d8b28082234e8d2c0094505c5268ed3c",
     "https://bcr.bazel.build/modules/rules_shell/0.3.0/MODULE.bazel": "de4402cd12f4cc8fda2354fce179fdb068c0b9ca1ec2d2b17b3e21b24c1a937b",
@@ -320,7 +320,7 @@
     "@@rules_android+//bzlmod_extensions:apksig.bzl%apksig_extension": {
       "general": {
         "bzlTransitiveDigest": "By9qVNN7G4oL1vYOJXye7Dp/CbR2ar9oxAW8WXAVcVw=",
-        "usagesDigest": "xq6OVkELeJvOgYo3oY/sUBsGFbcqdV+9BYiNgSPV/po=",
+        "usagesDigest": "zr/niBQ/s2fHozWAsg4vI70wAxcuFjG+QtM15qGkq9o=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -345,7 +345,7 @@
     "@@rules_android+//bzlmod_extensions:com_android_dex.bzl%com_android_dex_extension": {
       "general": {
         "bzlTransitiveDigest": "rvWbJQc8jInfIAaXIMhSOqUlwM9HVeLey6q0ISvg08Y=",
-        "usagesDigest": "toF8IFMu98H/VU2p1sfVC5fVXVYJunpbbmtM6tOsQXY=",
+        "usagesDigest": "c1Y/KGGjUYCyd8zNIVTUh1bynVXRFz6xGKaSCBpQANM=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
