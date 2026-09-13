@@ -3,3 +3,8 @@ common --java_runtime_version=25
 
 # useful for CI:
 # build --flaky_test_attempts=2
+
+# https://github.com/bazel-contrib/rules_python/issues/2945
+# Specifically, this makes up for https://github.com/bazelbuild/bazel/pull/30163 not having been released yet,
+# and can probably be removed once it is released.
+common --incompatible_default_to_explicit_init_py
