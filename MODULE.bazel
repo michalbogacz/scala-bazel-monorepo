@@ -1,9 +1,9 @@
-bazel_dep(name = "bazel_skylib", version = "1.9.0")
-bazel_dep(name = "rules_scala", version = "7.2.6")
+bazel_dep(name = "bazel_skylib", version = "1.9.2")
+bazel_dep(name = "rules_scala", version = "7.3.0")
 
 # VSCode/Cursor Metals extension needs explicit declaration
-bazel_dep(name = "rules_python", version = "2.0.2")
-bazel_dep(name = "rules_java", version = "9.6.1")
+bazel_dep(name = "rules_python", version = "2.3.3")
+bazel_dep(name = "rules_java", version = "9.9.0")
 
 register_toolchains("//:custom_scala_toolchain")
 
@@ -25,12 +25,12 @@ scala_deps.settings(
 scala_deps.scala()
 scala_deps.scalatest()
 
-bazel_dep(name = "rules_jvm_external", version = "7.0")
+bazel_dep(name = "rules_jvm_external", version = "7.1")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
-        "com.softwaremill.sttp.tapir:tapir-core_3:1.13.25",
+        "com.softwaremill.sttp.tapir:tapir-core_3:1.13.31",
     ],
     fetch_sources = True,
     lock_file = "//:maven_install.json",
@@ -46,8 +46,19 @@ bazel_dep(name = "rules_oci", version = "2.3.0")
 oci = use_extension("@rules_oci//oci:extensions.bzl", "oci")
 oci.pull(
     name = "java_temurin",
-    digest = "sha256:e85b0225cfa456374434813f70f964c325449e97fc9a74590864491589e812d4",  # linux/amd64 manifest digest
+    digest = "sha256:a051234f864d7ab78bf0188c3c540ac06c711a3b566f00f246be37073cc99dce",  # multi-arch index digest
     image = "eclipse-temurin",
+    # Multi-arch: the base is selected by target CPU, so images are native to the host
+    # that builds them. Run `:push` from CI (linux/amd64), not from an arm64 laptop.
+    platforms = [
+        "linux/amd64",
+        "linux/arm64/v8",
+    ],
     tag = "25.0.2_10-jre-noble",
 )
-use_repo(oci, "java_temurin")
+use_repo(
+    oci,
+    "java_temurin",
+    "java_temurin_linux_amd64",
+    "java_temurin_linux_arm64_v8",
+)
