@@ -6,7 +6,7 @@
     "com.google.errorprone:error_prone_annotations": -1035138750,
     "com.google.guava:guava": 1943808618,
     "com.google.j2objc:j2objc-annotations": 2003271689,
-    "com.softwaremill.sttp.tapir:tapir-core_3": 474383904,
+    "com.softwaremill.sttp.tapir:tapir-core_3": -1333070559,
     "repositories": -1949687017
   },
   "__RESOLVED_ARTIFACTS_HASH": {
@@ -25,14 +25,14 @@
     "com.google.j2objc:j2objc-annotations:jar:sources": -378364028,
     "com.softwaremill.magnolia1_3:magnolia_3": -1393004869,
     "com.softwaremill.magnolia1_3:magnolia_3:jar:sources": 1080172646,
-    "com.softwaremill.sttp.model:core_3": 1365678193,
-    "com.softwaremill.sttp.model:core_3:jar:sources": -585087858,
+    "com.softwaremill.sttp.model:core_3": 406599580,
+    "com.softwaremill.sttp.model:core_3:jar:sources": -647158266,
     "com.softwaremill.sttp.shared:core_3": -1604017139,
     "com.softwaremill.sttp.shared:core_3:jar:sources": -55821617,
-    "com.softwaremill.sttp.shared:ws_3": -1218427615,
+    "com.softwaremill.sttp.shared:ws_3": -560981190,
     "com.softwaremill.sttp.shared:ws_3:jar:sources": 1206984387,
-    "com.softwaremill.sttp.tapir:tapir-core_3": 469464650,
-    "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources": -651463422,
+    "com.softwaremill.sttp.tapir:tapir-core_3": -1806023295,
+    "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources": -1476583858,
     "org.checkerframework:checker-qual": -1533199059,
     "org.checkerframework:checker-qual:jar:sources": -1750922234,
     "org.scala-lang:scala-library": -997461185,
@@ -101,10 +101,10 @@
     },
     "com.softwaremill.sttp.model:core_3": {
       "shasums": {
-        "jar": "d75878a6257a334e79a09399597de4262176a8d220d02d92b0d9e8bd7862160b",
-        "sources": "9d3c29160c9b529ba7b8d02a457f452e62825e3cd427b12c604156ab1c72e0db"
+        "jar": "8edd0ae764888c4afa296c638a3a97706cbce0d5f78839546e7b4d5b703a7194",
+        "sources": "9ab60716521a545669438cd1824b38ec94e53b33020fb086d74ed6121f9db02f"
       },
-      "version": "1.7.18"
+      "version": "1.8.1"
     },
     "com.softwaremill.sttp.shared:core_3": {
       "shasums": {
@@ -122,10 +122,10 @@
     },
     "com.softwaremill.sttp.tapir:tapir-core_3": {
       "shasums": {
-        "jar": "f19826aa19ff38f60f58201ea6e1aa8eb97e4469eacd3a4f5f026212b11a1182",
-        "sources": "31d32e9ecaae6298d7194bd8a63bb579424ac176b6856d72d9ff9633a90e7a59"
+        "jar": "67d6d9fe0fdbffba548c9b14f419c20f359aaaba216b73418c7dae3f1d5afffc",
+        "sources": "a00c455609eea99601b2be13bfc7aa9c2aee28d7aeebf2e4b141cef1d8523cb3"
       },
-      "version": "1.13.31"
+      "version": "1.13.32"
     },
     "org.checkerframework:checker-qual": {
       "shasums": {
