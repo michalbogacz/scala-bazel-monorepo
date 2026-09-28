@@ -7,6 +7,8 @@
     "com.google.guava:guava": 1943808618,
     "com.google.j2objc:j2objc-annotations": 2003271689,
     "com.softwaremill.sttp.tapir:tapir-core_3": -1333070559,
+    "org.scala-lang:scala-library": 1230160761,
+    "org.scala-lang:scala3-library_3": 1771369610,
     "repositories": -1949687017
   },
   "__RESOLVED_ARTIFACTS_HASH": {
@@ -23,22 +25,18 @@
     "com.google.guava:listenablefuture": 1079558157,
     "com.google.j2objc:j2objc-annotations": 248818742,
     "com.google.j2objc:j2objc-annotations:jar:sources": -378364028,
-    "com.softwaremill.magnolia1_3:magnolia_3": -1393004869,
+    "com.softwaremill.magnolia1_3:magnolia_3": 1413763783,
     "com.softwaremill.magnolia1_3:magnolia_3:jar:sources": 1080172646,
-    "com.softwaremill.sttp.model:core_3": 406599580,
+    "com.softwaremill.sttp.model:core_3": -263902232,
     "com.softwaremill.sttp.model:core_3:jar:sources": -647158266,
-    "com.softwaremill.sttp.shared:core_3": -1604017139,
+    "com.softwaremill.sttp.shared:core_3": -1734013799,
     "com.softwaremill.sttp.shared:core_3:jar:sources": -55821617,
-    "com.softwaremill.sttp.shared:ws_3": -560981190,
+    "com.softwaremill.sttp.shared:ws_3": 961146689,
     "com.softwaremill.sttp.shared:ws_3:jar:sources": 1206984387,
-    "com.softwaremill.sttp.tapir:tapir-core_3": -1806023295,
+    "com.softwaremill.sttp.tapir:tapir-core_3": 1137711233,
     "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources": -1476583858,
     "org.checkerframework:checker-qual": -1533199059,
-    "org.checkerframework:checker-qual:jar:sources": -1750922234,
-    "org.scala-lang:scala-library": -997461185,
-    "org.scala-lang:scala-library:jar:sources": -118739197,
-    "org.scala-lang:scala3-library_3": -426775874,
-    "org.scala-lang:scala3-library_3:jar:sources": 448911557
+    "org.checkerframework:checker-qual:jar:sources": -1750922234
   },
   "conflict_resolution": {
     "com.google.errorprone:error_prone_annotations:2.5.1": "com.google.errorprone:error_prone_annotations:2.18.0"
@@ -133,20 +131,6 @@
         "sources": "443fa6151982bb4c6ce62e2938f53660085b13a7dceb517202777b87d0dea2c7"
       },
       "version": "3.33.0"
-    },
-    "org.scala-lang:scala-library": {
-      "shasums": {
-        "jar": "4e85d96ff7bc7dc627985523c3541b9917aaa08e956391380c42db21a2c4e5a0",
-        "sources": "bac5952705c53dce8a1a0ade4b6ca40900ac3421cd84dd6458ac683d768c3d18"
-      },
-      "version": "2.13.18"
-    },
-    "org.scala-lang:scala3-library_3": {
-      "shasums": {
-        "jar": "2c6eace9158df8ee4485a06128a479d968c1ebfc83ae9b1a394b58429f0d1492",
-        "sources": "3ee0545cd93486a5b950f578c90a74a1d2934b5e9c002db405c75eea7aa24e65"
-      },
-      "version": "3.3.8"
     }
   },
   "dependencies": {
@@ -158,29 +142,15 @@
       "com.google.j2objc:j2objc-annotations",
       "org.checkerframework:checker-qual"
     ],
-    "com.softwaremill.magnolia1_3:magnolia_3": [
-      "org.scala-lang:scala3-library_3"
-    ],
-    "com.softwaremill.sttp.model:core_3": [
-      "org.scala-lang:scala3-library_3"
-    ],
-    "com.softwaremill.sttp.shared:core_3": [
-      "org.scala-lang:scala3-library_3"
-    ],
     "com.softwaremill.sttp.shared:ws_3": [
       "com.softwaremill.sttp.model:core_3",
-      "com.softwaremill.sttp.shared:core_3",
-      "org.scala-lang:scala3-library_3"
+      "com.softwaremill.sttp.shared:core_3"
     ],
     "com.softwaremill.sttp.tapir:tapir-core_3": [
       "com.softwaremill.magnolia1_3:magnolia_3",
       "com.softwaremill.sttp.model:core_3",
       "com.softwaremill.sttp.shared:core_3",
-      "com.softwaremill.sttp.shared:ws_3",
-      "org.scala-lang:scala3-library_3"
-    ],
-    "org.scala-lang:scala3-library_3": [
-      "org.scala-lang:scala-library"
+      "com.softwaremill.sttp.shared:ws_3"
     ]
   },
   "packages": {
@@ -292,56 +262,6 @@
       "org.checkerframework.common.value.qual",
       "org.checkerframework.dataflow.qual",
       "org.checkerframework.framework.qual"
-    ],
-    "org.scala-lang:scala-library": [
-      "scala",
-      "scala.annotation",
-      "scala.annotation.meta",
-      "scala.annotation.unchecked",
-      "scala.beans",
-      "scala.collection",
-      "scala.collection.concurrent",
-      "scala.collection.convert",
-      "scala.collection.convert.impl",
-      "scala.collection.generic",
-      "scala.collection.immutable",
-      "scala.collection.mutable",
-      "scala.compat",
-      "scala.concurrent",
-      "scala.concurrent.duration",
-      "scala.concurrent.impl",
-      "scala.io",
-      "scala.jdk",
-      "scala.jdk.javaapi",
-      "scala.math",
-      "scala.ref",
-      "scala.reflect",
-      "scala.reflect.macros.internal",
-      "scala.runtime",
-      "scala.sys",
-      "scala.sys.process",
-      "scala.util",
-      "scala.util.control",
-      "scala.util.hashing",
-      "scala.util.matching"
-    ],
-    "org.scala-lang:scala3-library_3": [
-      "scala",
-      "scala.annotation",
-      "scala.annotation.internal",
-      "scala.annotation.unchecked",
-      "scala.compiletime.ops",
-      "scala.compiletime.testing",
-      "scala.deriving",
-      "scala.quoted",
-      "scala.quoted.runtime",
-      "scala.reflect",
-      "scala.runtime",
-      "scala.runtime.coverage",
-      "scala.runtime.function",
-      "scala.runtime.stdLibPatches",
-      "scala.util",
-      "scala.util.control"
     ]
   },
   "repositories": {
@@ -370,11 +290,7 @@
       "com.softwaremill.sttp.tapir:tapir-core_3",
       "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources",
       "org.checkerframework:checker-qual",
-      "org.checkerframework:checker-qual:jar:sources",
-      "org.scala-lang:scala-library",
-      "org.scala-lang:scala-library:jar:sources",
-      "org.scala-lang:scala3-library_3",
-      "org.scala-lang:scala3-library_3:jar:sources"
+      "org.checkerframework:checker-qual:jar:sources"
     ]
   },
   "services": {},

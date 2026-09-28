@@ -32,6 +32,12 @@ maven.install(
     artifacts = [
         "com.softwaremill.sttp.tapir:tapir-core_3:1.13.32",
     ],
+    # Provided by the rules_scala toolchain; without this, every Scala Maven dependency
+    # also pulls its own copy onto the runtime classpath.
+    excluded_artifacts = [
+        "org.scala-lang:scala-library",
+        "org.scala-lang:scala3-library_3",
+    ],
     fetch_sources = True,
     lock_file = "//:maven_install.json",
     repositories = [

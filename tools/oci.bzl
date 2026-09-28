@@ -1,16 +1,33 @@
 load("@rules_scala//scala:scala.bzl", "scala_binary")
 load("@rules_oci//oci:defs.bzl", "oci_image", "oci_load", "oci_push")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
+load("//tools:jvm_layers.bzl", "CLASSPATH_ARGFILE", "jvm_layer_files")
 
+# Third-party jars and first-party jars ship as separate layers instead of one app_deploy.jar layer,
+# so a code-only change pushes and pulls only the small first-party layer. See jvm_layers.bzl.
 def docker_image(application_name, main_class, deps = [], additional_jvm_opts = []):
     scala_binary(
         name = "app",
         main_class = main_class,
         deps = deps,
     )
+    jvm_layer_files(
+        name = "deps_files",
+        binary = ":app",
+        third_party = True,
+    )
+    pkg_tar(
+        name = "deps_layer",
+        srcs = [":deps_files"],
+    )
+    jvm_layer_files(
+        name = "app_files",
+        binary = ":app",
+        third_party = False,
+    )
     pkg_tar(
         name = "app_layer",
-        srcs = [":app_deploy.jar"],
+        srcs = [":app_files"],
     )
     oci_image(
         name = "image",
@@ -18,10 +35,13 @@ def docker_image(application_name, main_class, deps = [], additional_jvm_opts = 
         entrypoint = [
             "java",
         ] + additional_jvm_opts + [
-            "-jar",
-            "/app_deploy.jar",
+            "@" + CLASSPATH_ARGFILE,
+            main_class,
         ],
-        tars = [":app_layer"],
+        tars = [
+            ":deps_layer",
+            ":app_layer",
+        ],
     )
     oci_load(
         name = "local_image",
