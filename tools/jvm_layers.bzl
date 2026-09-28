@@ -26,6 +26,7 @@ def _dest(jar):
 
 def _is_third_party(jar):
     # Jars built in the main repository have an empty workspace name; Maven and toolchain jars do not.
+    # Code from other local repos (e.g. local_path_override) is therefore classified as third-party.
     return jar.owner.workspace_name != ""
 
 def _jvm_layer_files_impl(ctx):
