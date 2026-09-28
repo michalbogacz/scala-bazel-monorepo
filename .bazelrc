@@ -1,5 +1,7 @@
 common --java_language_version=25
 common --java_runtime_version=25
+common --tool_java_language_version=25
+common --tool_java_runtime_version=25
 
 # useful for CI:
 # build --flaky_test_attempts=2
