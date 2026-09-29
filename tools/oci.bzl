@@ -1,6 +1,6 @@
-load("@rules_scala//scala:scala.bzl", "scala_binary")
 load("@rules_oci//oci:defs.bzl", "oci_image", "oci_load", "oci_push")
 load("@rules_pkg//:pkg.bzl", "pkg_tar")
+load("@rules_scala//scala:scala.bzl", "scala_binary")
 load("//tools:jvm_layers.bzl", "CLASSPATH_ARGFILE", "jvm_layer_files")
 
 # Third-party jars and first-party jars ship as separate layers instead of one app_deploy.jar layer,
