@@ -134,6 +134,11 @@ Alternative can be [rules_lint](https://github.com/aspect-build/rules_lint)
 Docker images are built using rules_oci. 
 Each service build file has extension docker_image, which points to [oci.bzl](tools/oci.bzl)
 
+Instead of a single fat jar, the runtime classpath is split into two layers by [jvm_layers.bzl](tools/jvm_layers.bzl):
+third-party jars (Maven, Scala stdlib), which change only on dependency bumps, and jars built from this repo.
+A code-only change produces a new small layer only, so the registry push and the pull skip the third-party layer.
+The container starts with `java @/app/classpath.txt <main_class>`.
+
 Local image build:
 ```bash
 bazel run //projects/service-1/src/main:local_image
