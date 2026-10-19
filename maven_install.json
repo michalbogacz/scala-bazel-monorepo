@@ -6,7 +6,7 @@
     "com.google.errorprone:error_prone_annotations": -1035138750,
     "com.google.guava:guava": 1943808618,
     "com.google.j2objc:j2objc-annotations": 2003271689,
-    "com.softwaremill.sttp.tapir:tapir-core_3": -1333070559,
+    "com.softwaremill.sttp.tapir:tapir-core_3": 597889747,
     "org.scala-lang:scala-library": 1230160761,
     "org.scala-lang:scala3-library_3": 1771369610,
     "repositories": -1949687017
@@ -25,16 +25,16 @@
     "com.google.guava:listenablefuture": 1079558157,
     "com.google.j2objc:j2objc-annotations": 248818742,
     "com.google.j2objc:j2objc-annotations:jar:sources": -378364028,
-    "com.softwaremill.magnolia1_3:magnolia_3": 1413763783,
-    "com.softwaremill.magnolia1_3:magnolia_3:jar:sources": 1080172646,
-    "com.softwaremill.sttp.model:core_3": -263902232,
-    "com.softwaremill.sttp.model:core_3:jar:sources": -647158266,
-    "com.softwaremill.sttp.shared:core_3": -1734013799,
-    "com.softwaremill.sttp.shared:core_3:jar:sources": -55821617,
-    "com.softwaremill.sttp.shared:ws_3": 961146689,
-    "com.softwaremill.sttp.shared:ws_3:jar:sources": 1206984387,
-    "com.softwaremill.sttp.tapir:tapir-core_3": 1137711233,
-    "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources": -1476583858,
+    "com.softwaremill.magnolia1_3:magnolia_3": -2119413054,
+    "com.softwaremill.magnolia1_3:magnolia_3:jar:sources": -1885480507,
+    "com.softwaremill.sttp.model:core_3": 935188775,
+    "com.softwaremill.sttp.model:core_3:jar:sources": -533427813,
+    "com.softwaremill.sttp.shared:core_3": -1145567928,
+    "com.softwaremill.sttp.shared:core_3:jar:sources": -1014974233,
+    "com.softwaremill.sttp.shared:ws_3": 165721453,
+    "com.softwaremill.sttp.shared:ws_3:jar:sources": -202282642,
+    "com.softwaremill.sttp.tapir:tapir-core_3": 1251925027,
+    "com.softwaremill.sttp.tapir:tapir-core_3:jar:sources": 1036626333,
     "org.checkerframework:checker-qual": -1533199059,
     "org.checkerframework:checker-qual:jar:sources": -1750922234
   },
@@ -92,38 +92,38 @@
     },
     "com.softwaremill.magnolia1_3:magnolia_3": {
       "shasums": {
-        "jar": "70b4b23cfbbad55592be99fe62d9c43a0e1dd8c8895426baae44e8d1967bbe26",
-        "sources": "9b9432380c2273d9e891e5c821f69605294d1d5838b7213d660f66bb06704e64"
+        "jar": "a1c6fa666ec88c6fc758e4260fc5acbb60524ec364f6a94a58b0ac48c78b99d6",
+        "sources": "994579c0bd51f1451012a71ac0edd9ce7eab3e8f245879bd91caa7aa0bb990ba"
       },
-      "version": "1.3.23"
+      "version": "1.3.24"
     },
     "com.softwaremill.sttp.model:core_3": {
       "shasums": {
-        "jar": "8edd0ae764888c4afa296c638a3a97706cbce0d5f78839546e7b4d5b703a7194",
-        "sources": "9ab60716521a545669438cd1824b38ec94e53b33020fb086d74ed6121f9db02f"
+        "jar": "ed18a9b19b499f0f95b03bcd8b5c29646db18536779c6d9b03a736c4b7db6940",
+        "sources": "9685ad4aec0cc37df8a6f892eb751e6d7933648d41ca39bb440c38802e84e404"
       },
-      "version": "1.8.1"
+      "version": "1.9.0"
     },
     "com.softwaremill.sttp.shared:core_3": {
       "shasums": {
-        "jar": "16a2d4da27dfc95192d3093d497233c808694b0a5f7517430244e8ec4023cc38",
-        "sources": "5c07dc48e3b8b6f2e2dbceaebed60319854a5ad845ea20a0044caf199cd3f41e"
+        "jar": "3062d92d91efdb495363f024f1fef87806e1260d0cb68f32578e7b3c5940ce9e",
+        "sources": "7ed0448056f6739321754e379964bc4de087a6322bd40a43e17e23f1ea2eca82"
       },
-      "version": "1.5.2"
+      "version": "1.6.0"
     },
     "com.softwaremill.sttp.shared:ws_3": {
       "shasums": {
-        "jar": "5699b5348bc937fbca84dcb3369ee24ebd0d9e35f52523c5865a090a3ae916f0",
-        "sources": "168a0363b91f2777fe5f39441ec2023975645ee9ff3d2ff6171bfaf90f0ca9b7"
+        "jar": "dcbc7038ae9ae8757d64fc81e0aaeed22132bfc52a7e7e513f2b238e8d0129ba",
+        "sources": "ae202b5b528a01a63bf930f0fb1b66128f2272449900d8f85992810347c6734d"
       },
-      "version": "1.5.2"
+      "version": "1.6.0"
     },
     "com.softwaremill.sttp.tapir:tapir-core_3": {
       "shasums": {
-        "jar": "67d6d9fe0fdbffba548c9b14f419c20f359aaaba216b73418c7dae3f1d5afffc",
-        "sources": "a00c455609eea99601b2be13bfc7aa9c2aee28d7aeebf2e4b141cef1d8523cb3"
+        "jar": "b35d7cb6a7d8a8ca9f59a6869325bf3fa5a25419d534cdcc7fd043b495dde53e",
+        "sources": "c423b23d4adf20afbd6f75e4cfd906598e916f1ea16848bed876c4793d419a2d"
       },
-      "version": "1.13.32"
+      "version": "1.14.0"
     },
     "org.checkerframework:checker-qual": {
       "shasums": {
