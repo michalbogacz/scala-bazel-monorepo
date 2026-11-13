@@ -333,8 +333,8 @@
     },
     "@@rules_python+//python/uv:uv.bzl%uv": {
       "general": {
-        "bzlTransitiveDigest": "DafUArm1CsjJZcemT0FvUq9rUch+pq38+JqfOBJCpm8=",
-        "usagesDigest": "V+iNLdnOiiGgW0iq4irFt01I2357trR3Bo420RwUXO0=",
+        "bzlTransitiveDigest": "TQ5cO+kiLTnfLGozK8X9jYOQc1KfhD6X7MxYkZ/yi/A=",
+        "usagesDigest": "u1wU3CjXmcbf/skS6k4CaKH/ujXxIRz8c+Yi96/Vhdw=",
         "recordedInputs": [
           "REPO_MAPPING:rules_python+,bazel_tools bazel_tools",
           "REPO_MAPPING:rules_python+,platforms platforms"
