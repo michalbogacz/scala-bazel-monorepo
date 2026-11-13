@@ -1,5 +1,5 @@
 bazel_dep(name = "bazel_skylib", version = "1.9.2")
-bazel_dep(name = "rules_scala", version = "7.3.0")
+bazel_dep(name = "rules_scala", version = "7.4.1")
 
 # VSCode/Cursor Metals extension needs explicit declaration
 bazel_dep(name = "rules_python", version = "2.5.1")
@@ -25,12 +25,12 @@ scala_deps.settings(
 scala_deps.scala()
 scala_deps.scalatest()
 
-bazel_dep(name = "rules_jvm_external", version = "7.1")
+bazel_dep(name = "rules_jvm_external", version = "7.2")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
-        "com.softwaremill.sttp.tapir:tapir-core_3:1.13.32",
+        "com.softwaremill.sttp.tapir:tapir-core_3:1.14.1",
     ],
     # Provided by the rules_scala toolchain; without this, every Scala Maven dependency
     # also pulls its own copy onto the runtime classpath.
