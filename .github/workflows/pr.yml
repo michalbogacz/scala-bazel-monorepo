@@ -2,6 +2,10 @@ name: PR
 on:
   pull_request:
     types: [opened, reopened, synchronize, edited]
+  # Builds on master populate the cache, which every PR can then restore.
+  # Caches saved by PR runs are visible only to that PR.
+  push:
+    branches: [master]
 
 jobs:
   ci:
@@ -18,6 +22,8 @@ jobs:
           disk-cache: ${{ github.workflow }}
           # Share repository cache between workflows.
           repository-cache: true
+          # Only master saves caches; PRs just restore them.
+          cache-save: ${{ github.event_name != 'pull_request' }}
       - name: Scala formatting check
         run: ./tools/scalafmt --quiet --test
       - name: Build
